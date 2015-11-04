@@ -14,7 +14,7 @@ object SassCompiler {
       val parentPath = sassFile.getParentFile.getAbsolutePath
 
       runCompiler(
-        sassCommand ++ Seq("-l", "-I", parentPath) ++ options ++ Seq(Seq(sassFile.getAbsolutePath,  ":",   outfile.getAbsolutePath).mkString)
+        sassCommand ++ Seq("-l", "-I", parentPath) ++ options ++ Seq(Seq(sassFile.getAbsolutePath,  " ",   outfile.getAbsolutePath).mkString)
       )
 
       runCompiler(
